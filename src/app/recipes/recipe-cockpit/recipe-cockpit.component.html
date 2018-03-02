@@ -1,0 +1,29 @@
+<div class="ui container">
+  <div class="ui segment">
+    <h2 class="ui header">
+      <i class="edit outline icon"></i>
+      <div class="content">
+        Add Recipe
+        <div class="sub header">
+          Add a new recipe or edit an existing recipe
+        </div>
+      </div>
+    </h2>
+    <div class="ui form">
+      <div class="field">
+        <label>Recipe name</label>
+        <input type="text" name="recipeName" placeholder="Enter recipe name" [(ngModel)]="recipeName">
+      </div>
+      <div class="field">
+        <label>Recipe description</label>
+        <input type="text" name="recipeDescription" placeholder="Short description of recipe" [(ngModel)]="recipeDescription">
+      </div>
+      <div class="field">
+        <label>Recipe picture URL</label>
+        <input type="url" name="imagePath" placeholder="Enter URL to recipe picturee" [(ngModel)]="imagePath">
+      </div>
+      <div class="ui red submit button" (click)="onAddRecipe()">Add recipe</div>
+      <div class="ui negative basic button" (click)="onClearRecipe()">Clear recipe</div>
+    </div>
+  </div>
+</div>
