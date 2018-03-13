@@ -25,7 +25,7 @@ export class RecipeCockpitComponent implements OnInit {
   };
 
   onClearRecipe() {
-    this.recipeName = '';
+    this.recipeName = ''; 
     this.recipeDescription = '';
     this.imagePath = '';
   };
