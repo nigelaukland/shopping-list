@@ -1,0 +1,24 @@
+<div class="ui grid">
+  <div class="eight wide column">
+    <div class="ui divided items">
+      <div class="link item" *ngFor="let recipe of recipeList">
+        <div class="content">
+          <div class="header">
+            {{recipe.recipeName}}
+          </div>
+          <div class="description">
+            {{recipe.recipeDescription}}
+          </div>
+        </div>
+        <div class="extra">
+          <div class="ui right floated primary button">
+            Add to menu
+            <i class="right chevron icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="eight wide column">
+  </div>
+</div>

@@ -3,14 +3,5 @@
 <div class="ui container">
   <app-recipe-cockpit (recipeAdded)="onRecipeAdded($event)"></app-recipe-cockpit>
   <div class="ui divider"></div>
-  <!-- Card Section -->
-  <div class="ui container">
-    <div class="ui cards">
-      <!-- repeat  for each recipe -->
-      <app-recipe-detail
-        *ngFor="let recipe of recipeElements"
-        [recipe]="recipe">
-      </app-recipe-detail>
-    </div>
-  </div>
+  <app-recipe-list [recipeList]="recipeElements"></app-recipe-list>
 </div>
