@@ -8,6 +8,7 @@ import { RecipeService } from './shared/recipe.service';
   styleUrls: ['./recipes.component.css'],
   providers: [RecipeService]
 })
+
 export class RecipesComponent implements OnInit {
 
   constructor() { }

@@ -1,5 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
+import { RecipeService } from './../shared/recipe.service';
+import { Recipe } from '../shared/recipe.model';
 @Component({
   selector: 'app-recipe-cockpit',
   templateUrl: './recipe-cockpit.component.html',
@@ -7,26 +9,20 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 
 export class RecipeCockpitComponent implements OnInit {
-  @Output() recipeAdded = new EventEmitter<{recipeName: string, recipeDescription: string, imagePath: string}>(); 
-  recipeName = '';
-  recipeDescription = '';
-  imagePath = '';
 
-  constructor() { }
+  recipe: Recipe;
+
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
+    this.recipe = { recipeName: '', recipeDescription: '', recipeImagePath: ''};
   }
 
   onAddRecipe() {
-    this.recipeAdded.emit({recipeName: this.recipeName, recipeDescription: this.recipeDescription, imagePath: this.imagePath});
-    this.recipeName = '';
-    this.recipeDescription = '';
-    this.imagePath = '';
+    this.recipeService.onRecipeAdded(this.recipe);
   };
 
   onClearRecipe() {
-    this.recipeName = ''; 
-    this.recipeDescription = '';
-    this.imagePath = '';
+    this.recipe = { recipeName: '', recipeDescription: '', recipeImagePath: ''};
   };
 }

@@ -12,15 +12,15 @@
     <div class="ui form">
       <div class="field">
         <label>Recipe name</label>
-        <input type="text" name="recipeName" placeholder="Enter recipe name" [(ngModel)]="recipeName">
+        <input type="text" name="recipeName" placeholder="Enter recipe name" [(ngModel)]="recipe.recipeName">
       </div>
       <div class="field">
         <label>Recipe description</label>
-        <input type="text" name="recipeDescription" placeholder="Short description of recipe" [(ngModel)]="recipeDescription">
+        <input type="text" name="recipeDescription" placeholder="Short description of recipe" [(ngModel)]="recipe.recipeDescription">
       </div>
       <div class="field">
         <label>Recipe picture URL</label>
-        <input type="url" name="imagePath" placeholder="Enter URL to recipe picturee" [(ngModel)]="imagePath">
+        <input type="url" name="imagePath" placeholder="Enter URL to recipe picturee" [(ngModel)]="recipe.recipeImagePath">
       </div>
       <div class="ui red submit button" (click)="onAddRecipe()">Add recipe</div>
       <div class="ui negative basic button" (click)="onClearRecipe()">Clear recipe</div>
